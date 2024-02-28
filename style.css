@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Naskh Arabic", serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a1119a;
+}
+
+.model-box {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f0f0f65;
+  animation: openScreen 0.5s;
+}
+
+.model-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.openbtn {
+  padding: 5px 20px;
+  font-size: 25px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+}
+
+.model-content {
+  overflow: auto;
+  width: 380px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 10px;
+}
+.model-content .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: purple;
+  color: #eee;
+}
+.header .closebtn {
+  font-size: 35px;
+  cursor: pointer;
+}
+.header .closebtn:hover {
+  color: #030303;
+}
+.model-content .content {
+  overflow: auto;
+  height: 350px;
+  padding: 50px 20px;
+  background-color: #eee;
+  text-align: justify;
+}
+.model-content .content::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes openScreen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
